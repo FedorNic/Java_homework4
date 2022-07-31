@@ -2,22 +2,22 @@ package first;
 
 public class Сompetition {
 
-    public static int Race(Team command, Barrier pool, Barrier road, Barrier hole, Barrier enemy) {
+    public static int Race(Team command, Barrier[] challenge) {
         int count = 0;
         int temp = 0;
         System.out.println("-------------------------------------------");
         for (int i = 0; i < command.players.length; i++) {
             System.out.print("Результаты (" + command.players[i].name + ") : ");
-            temp = Swim(command.players[i], pool);
+            temp = Swim(command.players[i], Barrier.challenge[0]);
             System.out.print("плавание - " + Results(temp));
             count += temp;
-            temp = Run(command.players[i], road);
+            temp = Run(command.players[i], Barrier.challenge[1]);
             System.out.print(", бег - " + Results(temp));
             count += temp;
-            temp = Jump(command.players[i], hole);
+            temp = Jump(command.players[i], Barrier.challenge[2]);
             System.out.print(", прыжки - " + Results(temp));
             count += temp;
-            temp = Fight(command.players[i], enemy);
+            temp = Fight(command.players[i], Barrier.challenge[3]);
             System.out.println(", борьба - " + Results(temp));
             count += temp;
         }

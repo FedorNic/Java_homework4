@@ -9,10 +9,10 @@ public class main {
         Team.skills(Team.command_2);
 
         System.out.println("\nИтого: Команда 'Эльфы' получила "
-                + Сompetition.Race(Team.command_1, Barrier.pool, Barrier.road, Barrier.hole, Barrier.enemy) + " очков.\n");
+                + Сompetition.Race(Team.command_1, Barrier.challenge) + " очков.\n");
 
         System.out.println("\nИтого: Команда 'Орки' получила "
-                + Сompetition.Race(Team.command_2, Barrier.pool, Barrier.road, Barrier.hole, Barrier.enemy) + " очков.\n");
+                + Сompetition.Race(Team.command_2, Barrier.challenge) + " очков.\n");
     }
 
 }
